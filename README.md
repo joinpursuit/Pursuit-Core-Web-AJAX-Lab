@@ -1,4 +1,4 @@
-# Pursuit-Core-Web-AJAX-Lab
+ # Pursuit-Core-Web-AJAX-Lab
 
 Alright! It's time to employ our friend the [Dog API](https://dog.ceo/dog-api/) again. However, we aren't going to grab data manually from it anymore - we're going to use `XMLHttpRequest` to get it each time the user asks.
 

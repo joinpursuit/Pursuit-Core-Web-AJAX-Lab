@@ -9,8 +9,10 @@ btn.addEventListener("click",()=>{
 
 
 function getRandomImage() {
+    let option = document.querySelector("select").value
+    console.log(option)
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://dog.ceo/api/breeds/image/random")
+    xhr.open("GET", `https://dog.ceo/api/breed/${option}/images/random`)
     xhr.send()
     xhr.onreadystatechange = function() {
         if(this.readyState === this.DONE){
@@ -23,18 +25,22 @@ function getRandomImage() {
 }
 let cond = false
 function print(result){
-    
+    let first = document.querySelector("#first")
+    let con = document.querySelector("#contain")
     let i2 = document.createElement('img');
     i2.src = result 
-  
+    let i3 = document.createElement('img');
+    i3.src = result 
+    con.appendChild(i3)
+    
     if(cond){
         let img = document.querySelector("img");
-        document.body.replaceChild(i2,img)
+        first.replaceChild(i2,img)
     }
     else{
         let img = document.createElement('img');
         img.src = result 
-        document.body.appendChild(img)
+        first.appendChild(img)
         cond = true
     }
 }

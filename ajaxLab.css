@@ -20,13 +20,11 @@ h1{
   text-align: center;
   text-decoration: black;
   font-size: 30px;
-  background-size: chartreuse;
+  background-size: chartreuse; 
   border-bottom: black;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 img {
-  position: fixed;
+
   width: 50%;
   height: 50%;
   width: 50%;

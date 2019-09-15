@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let button = document.querySelector('#doggo')
     button.addEventListener('click',getRandomImage)
+    getRandomImage();
 })
 
 function getRandomImage() {
@@ -21,7 +22,7 @@ function getRandomImage() {
         let imageHodl = document.querySelector('#image-holder')
         let dogImg = imageHodl.querySelector("img");
         let oldImage = document.createElement('img')
-        console.log(imageHodl.hasChildNodes())
+        // console.log(imageHodl.hasChildNodes())
 
         if (dogImg){
             oldImage.setAttribute('src',link)

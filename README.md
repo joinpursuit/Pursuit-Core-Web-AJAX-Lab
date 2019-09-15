@@ -8,11 +8,11 @@ Also, we aren't just going to grab random dog breeds. We're going to grab random
 
 Create an HTML file and a JavaScript file. In your HTML file, create a `button` element and import your JavaScript.
 
-In your JavaScript, create an event listener on the button. For now, let's just have our button log `"Clicked!"` to the console.
+In your JavaScript, add an event listener the button. For now, let's just have the listener in our button log `"Clicked!"` to the console.
 
-Now, let's make a function called `getRandomImage`. This function should use `XMLHttpRequest` to make an AJAX GET request to the random image route (https://dog.ceo/api/breeds/image/random) of the Dog API. Get the response object and return it.
+Now, let's make a function called `getRandomImage`. This function should use `XMLHttpRequest` to make an AJAX GET request to the random image route `https://dog.ceo/api/breeds/image/random` of the Dog API. Get the response, parse it so that it becomes a JavaScript object and log the object to the console.
 
-Now, change your button event listener to call `getRandomImage` and log its return value to the console. Notice that this object has two keys: a `status` key (success! yay!) and a `message` key, which contains an image URL.
+Now, change your button event listener to call `getRandomImage`. Notice that this object has two keys: a `status` key (success! yay!) and a `message` key, which contains an image URL.
 
 ## Step 2
 

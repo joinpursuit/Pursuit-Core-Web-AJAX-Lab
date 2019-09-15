@@ -9,15 +9,18 @@ const getRandomImage = () => {
     let xhr = new XMLHttpRequest()
     xhr.onreadystatechange = function() {
         if(this.readyState === this.DONE){
-            let parsedResponse = JSON.parse(this.response)
-    let image = document.querySelector("img")
-    image.src = parsedResponse.message
-    console.log(parsedResponse.message)
-}}     
-xhr.open("GET", "https://dog.ceo/api/breeds/image/random")
-xhr.send()
+        let parsedResponse = JSON.parse(this.response)
+        console.log(parsedResponse)
+        displayImage(parsedResponse)
+        }
+    }
+    xhr.open("GET", "https://dog.ceo/api/breeds/image/random")
+    xhr.send()
+    }
+const displayImage = (obj) => {
+    let image = document.querySelector("img");
+    image.src = obj.message
 }
-
 const chooseBreed = () => {
     let selectBox = document.querySelector("#select-box")
     let selection = selectBox.value
@@ -30,7 +33,7 @@ const chooseBreed = () => {
         let numberOfPictures = parsedResponse.message.length
         let randomIndex = Math.floor(Math.random()* numberOfPictures)
         image.src = parsedResponse.message[randomIndex]
-    }}     
+        }}            
     xhr.open("GET", "https://dog.ceo/api/breed/pomeranian/images")
     xhr.send()
         }
@@ -43,10 +46,10 @@ const chooseBreed = () => {
         let numberOfPictures = parsedResponse.message.length
         let randomIndex = Math.floor(Math.random()* numberOfPictures)
         image.src = parsedResponse.message[randomIndex]
-    }}     
-    xhr.open("GET", "https://dog.ceo/api/breed/ridgeback-rhodesian/images")
+        }}     
+    xhr.open("GET", "https://dog.ceo/api/breed/ridgeback/images")
     xhr.send()
-        }
+    }
     else if(selection === "pug"){
             let xhr = new XMLHttpRequest()
             xhr.onreadystatechange = function() {
@@ -61,4 +64,3 @@ const chooseBreed = () => {
         xhr.send()
             }
     }
-//https://images.dog.ceo/breeds/ridgeback-rhodesian/n02087394_6039.jpg

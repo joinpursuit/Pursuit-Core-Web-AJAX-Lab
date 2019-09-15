@@ -1,27 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
     let button = document.querySelector('#dog-button');
-    button.addEventListener('click', getRRandomImage);
+    button.addEventListener('click', getRandomImage);
 })
 
 function getData() {
     console.log('clicked');
 }
-function getRRandomImage() {
+function getRandomImage() {
     let xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if(this.readyState === this.DONE){
         let parsedImage = JSON.parse(this.response);
-        renderPictures(parsedImage.results)
+        displayDog(parsedImage.message)
     }
 }
 xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
 xhr.send();
 }
-const renderPictures = (images) => {
-    let usersUl = document.querySelector('#user-list');
-    for (let user of users) {
-        let userLi = document.createElement('li');
-        userLi.innerText = user.name.first + ' ' + user.name.last;
-        usersUl.appendChild(userLi);
-    }
-}
+const displayDog = (url) => {
+        let img = document.querySelector('img');
+        if(img === null){ // no picture, first time clicking button
+            let dogImg = document.createElement('img');
+        dogImg.src = url;
+         document.body.appendChild(dogImg);
+        } else{
+            img.src = url
+        }
+        }

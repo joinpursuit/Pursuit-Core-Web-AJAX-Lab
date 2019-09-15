@@ -28,7 +28,7 @@ function getRandomImage() {
 
 
 const replaceDog = (dogs) => {
-    let newDog = document.createElement('img')
+    let newDog = document.createElement('image')
     if(document.querySelector('img')) {
         let firstDog = document.querySelector('img');
         console.log(firstDog);

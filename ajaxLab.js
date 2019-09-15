@@ -6,22 +6,24 @@ document.addEventListener("DOMContentLoaded", () => {
 function getRandomImage() {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if(this.readyState === this.DONE) {
-      // console.log("done", this.DONE)
-      // console.log("ready State", this.readyState)
-      // console.log(this.readyState);
-      let parseResponse = JSON.parse(this.response).message
-      console.log(parseResponse)
-   //     let randomDogs = dogsJSON.results
-      createDOM(parseResponse)
-   //   }
+    if (this.readyState === this.DONE) {
+      let response = JSON.parse(this.response);
+      console.log(response.message);
+      showDogs(response.message);
     }
-
   };
   xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
   xhr.send();
 }
 
-function createDOM (){
-let dogList = document.querySelector()
+function showDogs(dogs) {
+  let newImage = document.createElement("img");
+  if (document.querySelector("img")) {
+    let oldImage = document.querySelector("img");
+    console.log(oldImage);
+    document.body.replaceChild(newImage, oldImage);
+    newImage.src = dogs;
+  }
+  document.body.appendChild(newImage)
+  newImage.src = dogs;
 }

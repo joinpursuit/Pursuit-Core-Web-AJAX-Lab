@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     getDogPic.addEventListener("click", getRandomImage)
 })
 
-const fetchDog = () => {
-    console.log("Button clicked.")
-}
+// const fetchDog = () => {
+//     console.log("Button clicked.")
+// }
 
 const getRandomImage = () => {
     let xhr = new XMLHttpRequest()
@@ -19,15 +19,15 @@ const getRandomImage = () => {
     xhr.send()
 }
 
-const renderDogPic = (dogs) => {
-    // console.log(dogs)
+const renderDogPic = (dog) => {
+    // console.log(dog)
     let dogInsert = document.createElement("img")
     if (document.querySelector("img")) {
         let oldDog = document.querySelector("img")
-        console.log(oldDog)
+        // console.log(oldDog)
         document.body.replaceChild(dogInsert, oldDog)
-        dogInsert.src = dogs
+        dogInsert.src = dog
     }
     document.body.appendChild(dogInsert)
-    dogInsert.src = dogs
+    dogInsert.src = dog
 }

@@ -8,7 +8,8 @@ const getRandomImage = () => {
     xhr.onreadystatechange = function() {
         if(this.readyState === this.DONE) {
             let parseResponse = JSON.parse(this.response)
-            renderImage(parseResponse.message)
+            let url = parseResponse.message
+            renderImage(url)
         
             
         }
@@ -17,13 +18,19 @@ const getRandomImage = () => {
     xhr.send()
 }
 
-const renderImage = (user) => {
-    let img = document.createElement("img")
-    img.src = user
-    document.body.appendChild(img)
-    let newImg = document.createElement("img")
-    newImg.src = user
-    document.body.replaceChild(newImg, img)
+const renderImage = (url) => {
+    let img = document.querySelector("img")
+    if(img === null){
+        let dogImg = document.createElement(img)
+        dogImg.src = url
+        document.body.appendChild(dogImg)
+    }else {
+        img.src = url
+    }
     
+    
+    
+    //let img = document.querySelector("img")
+    //img.src = url
     
 }

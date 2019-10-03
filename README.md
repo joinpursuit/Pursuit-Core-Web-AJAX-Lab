@@ -1,10 +1,9 @@
-# Pursuit-Core-Web-AJAX-Lab
+ # Pursuit-Core-Web-AJAX-Lab
 
 Alright! It's time to employ our friend the [Dog API](https://dog.ceo/dog-api/) again. However, we aren't going to grab data manually from it anymore - we're going to use `XMLHttpRequest` to get it each time the user asks.
 
 Also, we aren't just going to grab random dog breeds. We're going to grab random dog images and present them to the user! What a therapeutic little app.
-
-## Step 1
+i## Step 1
 
 Create an HTML file and a JavaScript file. In your HTML file, create a `button` element and import your JavaScript.
 

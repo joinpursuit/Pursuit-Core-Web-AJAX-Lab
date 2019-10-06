@@ -22,6 +22,9 @@ const getRandomImage = () => {
   getDogImages.send();
 }
 
+const displayImage = (url) => {
+  console.log(url);
+  let img = document.querySelector("img");
 
 let dogImg = document.createElement("img");
 dogImg.src = url;
@@ -29,10 +32,6 @@ document.body.appendChild(dogImg);
 }
 
 // this code for replacing the image with the next doesn't quite work yet:
-//
-// const displayImage = (url) => {
-//   console.log(url);
-//   let img = document.querySelector("img");
 //
 //   if (img === null) {
 //     let dogImg = document.createElement("img");

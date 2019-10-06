@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   let button = document.querySelector("button");
-  button.addEventListener("click", fetchDogImage);
+  button.addEventListener("click", getRandomImage);
 })
 
-const fetchDogImage = () => {
+const getRandomImage = () => {
   const xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
 
     if (this.readyState === this.DONE) {
-      
+
       let parsedResponse = JSON.parse(this.response);
       let imageSrc = parsedResponse.message;
 

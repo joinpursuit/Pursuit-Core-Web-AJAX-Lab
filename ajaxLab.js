@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const getRandomImage = () => {
-  const xhr = new XMLHttpRequest();
+  console.log("Clicked!");
+  const getDogImages = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function () {
+  getDogImages.onreadystatechange = function () {
 
     if (this.readyState === this.DONE) {
 
@@ -17,8 +18,8 @@ const getRandomImage = () => {
       console.log(parsedResponse);
     }
   }
-  xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
-  xhr.send();
+  getDogImages.open("GET", "https://dog.ceo/api/breeds/image/random");
+  getDogImages.send();
 }
 
 const displayImage = (url) => {

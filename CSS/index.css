@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+#search {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+#pic {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+img {
+  width: 20%;
+  border: 2px black solid;
+}

@@ -14,10 +14,19 @@ h1 {
 #pic {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 90px;
 }
 
 img {
-  width: 20%;
-  border: 2px black solid;
+  width: 30%;
+  border-top: 22px black solid;
+  border-bottom: 22px black solid;
+  border-left: 22px white solid;
+  border-right: 22px white solid;
+  box-shadow: 20px 15px 75px;
+}
+
+label {
+  font-size: 1.2em;
+  padding-right: 10px;
 }

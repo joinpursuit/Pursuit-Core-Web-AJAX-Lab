@@ -1,0 +1,35 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(14, 147, 47); 
+}
+h1{
+  text-align: center;
+  color: rgb(9, 99, 72);
+  text-decoration-style: double;
+  text-shadow: darkgreen ;
+  box-shadow: blue;
+  font-size: 40px
+}
+#loadDog{
+  text-align: center;
+  text-decoration: black;
+  font-size: 30px;
+  background-size: chartreuse; 
+  border-bottom: black;
+}
+img {
+
+  width: 50%;
+  height: 50%;
+  width: 50%;
+  height: 50%;
+  align-content: center;
+  padding-left: 25%;
+  padding-top: 15%;
+}
